@@ -26,7 +26,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   verification:{
-    google:"RqkSyip6X_T9anb8Jwv99jPzHrUR0k5SG31y6BvnHL4"
+    google:"q3oSLbk4mdrMygVA-UWqdLelNo6vJJB_4v2icsafC7g"
   },
   title: {
     default: `${BRAND_NAME} | ${FULL_NAME}`,
