@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Brand palette */
+  --color-primary: #3b82f6;
+  --color-primary-foreground: #f8fafc;
+  --color-gold: #d4a853;
+  --color-gold-foreground: #0f1729;
+  --color-accent: #60a5fa;
+
+  /* Surfaces — deep navy, not pure black */
+  --color-background: #0b1120;
+  --color-foreground: #e8edf7;
+  --color-surface: #0f1729;
+  --color-surface-elevated: #141f35;
+  --color-card: #121c31;
+  --color-card-foreground: #e8edf7;
+  --color-muted: #1a2744;
+  --color-muted-foreground: #94a3b8;
+  --color-border: #1e3a5f;
+  --color-input: #1a2744;
+  --color-ring: #3b82f6;
+
+  /* Semantic */
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #fef2f2;
+  --color-popover: #121c31;
+  --color-popover-foreground: #e8edf7;
+  --color-secondary: #1a2744;
+  --color-secondary-foreground: #cbd5e1;
+
+  /* Typography */
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+  --font-display: var(--font-space);
+
+  /* Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+
+  /* Shadows */
+  --shadow-glow: 0 0 40px -8px color-mix(in oklab, var(--color-primary) 45%, transparent);
+  --shadow-gold: 0 0 32px -6px color-mix(in oklab, var(--color-gold) 35%, transparent);
+  --shadow-soft: 0 8px 32px -12px rgba(0, 0, 0, 0.5);
+
+  /* Animations */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+  --animate-shimmer: shimmer 2.5s linear infinite;
+}
+
+:root {
+  color-scheme: dark;
+  --glass-bg: rgba(18, 28, 49, 0.55);
+  --glass-border: rgba(59, 130, 246, 0.15);
+  --gradient-hero: linear-gradient(
+    135deg,
+    #0b1120 0%,
+    #0f1729 40%,
+    #141f35 100%
+  );
+  --gradient-accent: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--color-primary) 80%, transparent),
+    color-mix(in oklab, var(--color-gold) 60%, transparent)
+  );
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes grid-drift {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(48px);
+  }
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-primary) 40%, transparent);
+  color: var(--color-foreground);
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+}
+
+.glow-border {
+  position: relative;
+}
+
+.glow-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: var(--gradient-accent);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.5;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.glow-border:hover::before {
+  opacity: 1;
+}
+
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-foreground) 0%,
+    var(--color-accent) 50%,
+    var(--color-gold) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.noise-overlay::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+.section-padding {
+  padding-block: clamp(4rem, 10vw, 7rem);
+  padding-inline: clamp(1rem, 5vw, 2rem);
+}
+
+.font-display {
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
