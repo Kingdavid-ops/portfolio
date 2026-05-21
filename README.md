@@ -20,7 +20,7 @@ cp .env.example .env.local
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://shadrod.vercel.app](http://shadrod.vercel.app).
 
 ## Branding
 
