@@ -89,8 +89,9 @@ export default function AboutPage() {
           >
             <h2 className="font-display text-3xl font-bold text-gradient">Let&apos;s Connect</h2>
             <p className="mt-4 text-muted-foreground max-w-md">
-              Have a project in mind? Send a message — the form is wired to MongoDB via Mongoose
-              when <code className="text-primary text-sm">MONGODB_URI</code> is configured.
+              Have a project in mind? Send a message
+               {/* — the form is wired to MongoDB via Mongoose
+              when <code className="text-primary text-sm">MONGODB_URI</code> is configured. */}
             </p>
             <p className="mt-6">
               <a
