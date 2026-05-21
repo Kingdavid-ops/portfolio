@@ -36,7 +36,7 @@ export const BRAND_NAME = "Shadrod";
 Add to `.env.local`:
 
 ```
-MONGODB_URI=mongodb://127.0.0.1:27017/shadrod
+MONGODB_URI=?
 ```
 
 Contact form POSTs to `/api/contact`. Blog API at `/api/blog` falls back to static data when the DB is empty.
@@ -52,7 +52,7 @@ Contact form POSTs to `/api/contact`. Blog API at `/api/blog` falls back to stat
 
 ## Profile Image
 
-Replace `public/profile-placeholder.svg` with your photo (e.g. `public/profile.jpg`) and update `ProfileImage` in `src/components/shared/profile-image.tsx`.
+<!-- Replace `public/profile-placeholder.svg` with your photo (e.g. `public/profile.jpg`) and update `ProfileImage` in `src/components/shared/profile-image.tsx`. -->
 
 ## Scripts
 
