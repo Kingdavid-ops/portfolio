@@ -78,7 +78,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="flex h-10 w-10 items-center justify-center rounded-lg glass text-muted-foreground transition-all duration-300 hover:border-primary/50 hover:text-primary hover:shadow-[var(--shadow-glow)]"
+                  className="flex h-10 w-10 items-center justify-center rounded-lg glass text-muted-foreground transition-all duration-300 hover:border-primary/50 hover:text-primary hover:shadow-(--shadow-glow)"
                   whileHover={{ scale: 1.08, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >

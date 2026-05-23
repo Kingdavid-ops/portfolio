@@ -71,7 +71,7 @@ export default function BlogPage() {
             <h2 className="mb-6 text-sm font-semibold uppercase tracking-wider text-gold">
               Featured Article
             </h2>
-            <div className="glass glow-border rounded-2xl p-8 md:p-10 transition-all duration-300 hover:shadow-[var(--shadow-glow)]">
+            <div className="glass glow-border rounded-2xl p-8 md:p-10 transition-all duration-300 hover:shadow-(--shadow-glow)">
               <Badge variant="gold" className="mb-4">
                 Featured
               </Badge>
