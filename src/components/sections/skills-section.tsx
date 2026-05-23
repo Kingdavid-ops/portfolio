@@ -35,7 +35,11 @@ export function SkillsSection() {
                   initial={{ width: 0 }}
                   whileInView={{ width: `${skill.level}%` }}
                   viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.2 + i * 0.05, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{
+                    duration: 1,
+                    delay: 0.2 + i * 0.05,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
                 />
               </div>
             </motion.div>

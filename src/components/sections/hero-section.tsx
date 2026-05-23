@@ -127,7 +127,11 @@ export function HeroSection() {
             className="absolute -bottom-4 -left-4 z-20 w-32 sm:w-40 lg:-left-8"
             style={{ animation: "var(--animate-float)" }}
           >
-            <ProfileImage size={160} priority className="rounded-2xl shadow-[var(--shadow-glow)]" />
+            <ProfileImage
+              size={160}
+              priority
+              className="rounded-2xl shadow-[var(--shadow-glow)]"
+            />
           </motion.div>
 
           <motion.div
@@ -137,7 +141,9 @@ export function HeroSection() {
             className="absolute top-4 right-0 glass rounded-xl px-4 py-3 hidden sm:block"
           >
             <p className="text-xs text-muted-foreground">Status</p>
-            <p className="text-sm font-medium text-primary">Available for hire</p>
+            <p className="text-sm font-medium text-primary">
+              Available for hire
+            </p>
           </motion.div>
 
           <motion.div

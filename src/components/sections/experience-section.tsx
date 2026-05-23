@@ -27,7 +27,9 @@ export function ExperienceSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className={`relative flex flex-col md:w-1/2 ${
-                  i % 2 === 0 ? "md:ml-0 md:pr-12 md:text-right" : "md:ml-auto md:pl-12"
+                  i % 2 === 0
+                    ? "md:ml-0 md:pr-12 md:text-right"
+                    : "md:ml-auto md:pl-12"
                 } pl-12 md:pl-0`}
               >
                 <span
@@ -37,7 +39,9 @@ export function ExperienceSection() {
                 />
                 <div className="glass glow-border rounded-xl p-6 transition-all duration-300 hover:shadow-[var(--shadow-glow)]">
                   <p className="text-sm font-mono text-gold">{exp.period}</p>
-                  <h3 className="mt-2 font-display text-xl font-semibold">{exp.role}</h3>
+                  <h3 className="mt-2 font-display text-xl font-semibold">
+                    {exp.role}
+                  </h3>
                   <p className="text-primary">{exp.company}</p>
                   <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
                     {exp.description}

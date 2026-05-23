@@ -5,7 +5,13 @@ import { Code, Layers, Lightbulb, Sparkles } from "lucide-react";
 import { services } from "@/data/content";
 import { SectionReveal } from "@/components/motion/section-reveal";
 import { SectionHeading } from "@/components/sections/section-heading";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 const icons = {
   layers: Layers,

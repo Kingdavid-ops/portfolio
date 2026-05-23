@@ -32,12 +32,16 @@ export default function AboutPage() {
             <h1 className="font-display text-4xl font-bold text-gradient sm:text-5xl">
               {FULL_NAME}
             </h1>
-            <p className="mt-2 text-lg text-primary font-medium">{BRAND_NAME}</p>
-            <p className="mt-6 text-muted-foreground leading-relaxed">{TAGLINE}</p>
+            <p className="mt-2 text-lg text-primary font-medium">
+              {BRAND_NAME}
+            </p>
+            <p className="mt-6 text-muted-foreground leading-relaxed">
+              {TAGLINE}
+            </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              I architect and ship premium web products — from cinematic portfolios to
-              enterprise platforms. My work blends deep computer science fundamentals with
-              obsessive UI craft.
+              I architect and ship premium web products — from cinematic
+              portfolios to enterprise platforms. My work blends deep computer
+              science fundamentals with obsessive UI craft.
             </p>
 
             <div className="mt-8 flex items-center gap-2 text-muted-foreground">
@@ -75,22 +79,31 @@ export default function AboutPage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.7 }}
           >
-            <ProfileImage className="aspect-4/5 w-full max-w-md mx-auto" size={500} priority />
+            <ProfileImage
+              className="aspect-4/5 w-full max-w-md mx-auto"
+              size={500}
+              priority
+            />
           </motion.div>
         </div>
       </section>
 
-      <section id="contact" className="section-padding bg-surface/40 scroll-mt-24">
+      <section
+        id="contact"
+        className="section-padding bg-surface/40 scroll-mt-24"
+      >
         <div className="mx-auto max-w-7xl grid gap-12 lg:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-3xl font-bold text-gradient">Let&apos;s Connect</h2>
+            <h2 className="font-display text-3xl font-bold text-gradient">
+              Let&apos;s Connect
+            </h2>
             <p className="mt-4 text-muted-foreground max-w-md">
               Have a project in mind? Send a message
-               {/* — the form is wired to MongoDB via Mongoose
+              {/* — the form is wired to MongoDB via Mongoose
               when <code className="text-primary text-sm">MONGODB_URI</code> is configured. */}
             </p>
             <p className="mt-6">

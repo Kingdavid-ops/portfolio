@@ -37,7 +37,10 @@ export function TestimonialsSection() {
                   </p>
                   <div className="mt-6 flex items-center gap-3">
                     <Avatar>
-                      <AvatarImage src="/profile-placeholder.svg" alt={t.name} />
+                      <AvatarImage
+                        src="/profile-placeholder.svg"
+                        alt={t.name}
+                      />
                       <AvatarFallback>{t.name[0]}</AvatarFallback>
                     </Avatar>
                     <div>

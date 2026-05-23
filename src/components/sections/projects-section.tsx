@@ -6,7 +6,13 @@ import Link from "next/link";
 import { projects } from "@/data/content";
 import { SectionReveal } from "@/components/motion/section-reveal";
 import { SectionHeading } from "@/components/sections/section-heading";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -46,7 +52,11 @@ export function ProjectsSection() {
                       </Badge>
                     ))}
                   </div>
-                  <Button asChild variant="ghost" className="mt-6 px-0 group/btn">
+                  <Button
+                    asChild
+                    variant="ghost"
+                    className="mt-6 px-0 group/btn"
+                  >
                     <Link href={project.href}>
                       Explore
                       <ExternalLink className="transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />

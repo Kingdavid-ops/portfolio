@@ -18,7 +18,11 @@ export function BlogPreviewSection() {
             title="Latest Insights"
             description="Engineering notes on Next.js, 3D, and elite product craft."
           />
-          <Button asChild variant="outline" className="shrink-0 self-start sm:self-auto">
+          <Button
+            asChild
+            variant="outline"
+            className="shrink-0 self-start sm:self-auto"
+          >
             <Link href="/blog">
               All Articles
               <ArrowRight className="h-4 w-4" />

@@ -33,10 +33,7 @@ export function TechStackSection() {
           ))}
         </div>
 
-        <motion.div
-          className="mt-16 flex gap-4 overflow-hidden"
-          aria-hidden
-        >
+        <motion.div className="mt-16 flex gap-4 overflow-hidden" aria-hidden>
           {[0, 1].map((row) => (
             <motion.div
               key={row}

@@ -47,8 +47,8 @@ export default function BlogPage() {
               Engineering Blog
             </h1>
             <p className="mt-4 max-w-2xl text-muted-foreground">
-              Thoughts on architecture, 3D interfaces, and building memorable products — by{" "}
-              {FULL_NAME}.
+              Thoughts on architecture, 3D interfaces, and building memorable
+              products — by {FULL_NAME}.
             </p>
           </div>
           <motion.div
@@ -75,8 +75,12 @@ export default function BlogPage() {
               <Badge variant="gold" className="mb-4">
                 Featured
               </Badge>
-              <h3 className="font-display text-2xl font-bold md:text-3xl">{featured.title}</h3>
-              <p className="mt-4 max-w-2xl text-muted-foreground">{featured.excerpt}</p>
+              <h3 className="font-display text-2xl font-bold md:text-3xl">
+                {featured.title}
+              </h3>
+              <p className="mt-4 max-w-2xl text-muted-foreground">
+                {featured.excerpt}
+              </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {featured.tags.map((tag) => (
                   <Badge key={tag} variant="outline">
